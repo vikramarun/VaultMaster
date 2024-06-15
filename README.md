@@ -1,0 +1,1 @@
+Create a .env file in root directory filled out with the contents of .env.sample.

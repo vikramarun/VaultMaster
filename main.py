@@ -49,6 +49,7 @@ if __name__ == "__main__":
     client = OpenAIClient()
 
     vault_code = get_vault_details(8453,'0xa92666b7eee6fd502398bb8cabfe15d41f7cd721')
+    print(vault_code)
     # chat_completion = client.get_chat_completion(
     #     messages=[
     #         {

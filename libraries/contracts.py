@@ -1,14 +1,11 @@
 import os
 import requests
-import re
-import json
-import time
 from web3 import Web3
 from web3.middleware import geth_poa_middleware
 from dotenv import load_dotenv
 
-# Load environment variables from .env.local file
-load_dotenv('.env.local')
+# Load environment variables from .env file
+load_dotenv('.env')
 
 class ContractInfo:
     """

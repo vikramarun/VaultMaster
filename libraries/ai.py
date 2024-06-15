@@ -2,7 +2,8 @@ import os
 from openai import OpenAI
 from dotenv import load_dotenv
 
-load_dotenv(".env.local")
+# Load environment variables from .env file
+load_dotenv('.env')
 
 class OpenAIClient:
     """
