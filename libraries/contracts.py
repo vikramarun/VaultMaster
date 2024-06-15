@@ -92,7 +92,7 @@ class ContractInfo:
             contract_address = source_code['result'][0].get('Implementation',
                                                             source_code['result'][0].get('ContractAddress'))
             if contract_address:
-                impl_source_code = self._get_source_code(contract_address)
+                impl_source_code = self.get_contract_sourcecode(contract_address)
                 if impl_source_code['status'] == "1":
                     contract_name = impl_source_code['result'][0]['ContractName']
             else:
