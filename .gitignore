@@ -1,0 +1,5 @@
+.env.local
+.idea/
+venv/
+__pycache__/
+file_system_store/
