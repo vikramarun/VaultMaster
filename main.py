@@ -55,16 +55,15 @@ if __name__ == "__main__":
 
     if vault_code['status'] == 200 and adapter_code['status'] == 200:
         message_context = (
-            "I have an ERC-4626 vault and I'm looking to add more functionality in a new contract performing actions on the shares. "
-            "The first contract code I'm going to give you is the vault, "
-            "and the next one is the functionality that I'm looking to include on top of the vault. I want to include"
-            "the additional lock and unlock behavior after the initial deposit/mint and before the withdraw/redeem process in the original vault contract."
-            "Be comprehensive, and please write a new ERC-4626 contract performing this behavior."
+            "Title: Adapt Existing ERC-4626 Strategy Integrating Locking Mechanism"
+            "Context/Overview: I have an existing ERC-4626 vault and a separate contract that people normally call to do something with their vault shares after."
+            "I want to create a new ERC-4626 strategy that incorporates this action directly and appropriately into the original vault. Be comprehensive, and please directly modify the original Vault contract to perform the Action, but only show me what changes."
+            "Action Description: Vault shares need to be 'lock' after getting them via deposit/mint. 'unlock' must similarly be called before redeem/withdraw."
         )
         vault_message = vault_code['data']['source_code']
         adapter_message = adapter_code['data']['source_code']
 
-        combined_message = f"{message_context}\n\nVault Code:\n{vault_message}\n\nAdapter Code:\n{adapter_message}"
+        combined_message = f"{message_context}\n\nVault Code:\n{vault_message}\n\nAction Code:\n{adapter_message}"
 
         messages = [
             {"role": "system", "content": "You are a helpful assistant."},

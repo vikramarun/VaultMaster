@@ -15,7 +15,7 @@ class OpenAIClient:
         """
         self.client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
 
-    def get_chat_completion(self, messages, model="gpt-3.5-turbo"):
+    def get_chat_completion(self, messages, model="gpt-4"):
         """
         Interacts with the specified OpenAI GPT model using the provided messages.
 
